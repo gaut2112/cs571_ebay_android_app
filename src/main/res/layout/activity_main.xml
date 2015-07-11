@@ -1,0 +1,148 @@
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ScrollView01"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:scrollbars="none" >
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+
+    TextView android:text="@string/hello_world" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Ebay Search"
+        android:id="@+id/app_l"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="46dp"
+        android:textColor="#ff1a13ff" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Keyword"
+        android:id="@+id/keyword_l"
+        android:layout_below="@+id/app_l"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="42dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/keyword_i"
+        android:layout_alignBottom="@+id/keyword_l"
+        android:layout_alignLeft="@+id/app_l"
+        android:layout_alignStart="@+id/app_l"
+        android:inputType="text"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Price From"
+        android:id="@+id/price_from_l"
+        android:layout_below="@+id/keyword_l"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="42dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:ems="10"
+        android:id="@+id/price_from_i"
+        android:layout_alignBottom="@+id/price_from_l"
+        android:layout_alignLeft="@+id/keyword_i"
+        android:layout_alignStart="@+id/keyword_i"
+        android:layout_alignRight="@+id/keyword_i"
+        android:layout_alignEnd="@+id/keyword_i" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Price To"
+        android:id="@+id/price_to_l"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="42dp"
+        android:layout_below="@+id/price_from_l" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:id="@+id/price_to_i"
+        android:layout_alignBottom="@+id/price_to_l"
+        android:layout_alignLeft="@+id/price_from_i"
+        android:layout_alignStart="@+id/price_from_i"
+        android:layout_alignRight="@+id/price_from_i"
+        android:layout_alignEnd="@+id/price_from_i"
+        android:inputType="text" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Sort By"
+        android:id="@+id/sort_l"
+        android:layout_below="@+id/price_to_l"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="42dp" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/sort_i"
+        android:layout_alignTop="@+id/sort_l"
+        android:layout_alignLeft="@+id/price_to_i"
+        android:layout_alignStart="@+id/price_to_i"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clear"
+        android:id="@+id/clear"
+        android:layout_below="@+id/sort_i"
+        android:layout_centerHorizontal="true"
+        android:onClick="clearFormData"
+        android:layout_marginTop="30dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:id="@+id/submit"
+        android:layout_alignTop="@+id/clear"
+        android:layout_toRightOf="@+id/app_l"
+        android:layout_toEndOf="@+id/app_l"
+        android:onClick="validateForm"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/error_l"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:textColor="#ffff0000" />
+
+</RelativeLayout>
+</ScrollView>
